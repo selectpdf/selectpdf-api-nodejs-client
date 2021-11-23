@@ -1,0 +1,42 @@
+{
+    "name": "selectpdf",
+    "version": "1.4.0",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:selectpdf/selectpdf-api-nodejs-client.git"
+    },
+    "directories": {
+        "lib": "lib"
+    },
+    "engines": {
+        "node": "*"
+    },
+    "files": [
+        "lib/selectpdf.js",
+        "docs/selectpdf.md",
+        "README.md",
+        "CHANGELOG.md",
+        "package.json",
+        "samples/simple-url-to-pdf.js",
+        "samples/simple-html-string-to-pdf.js",
+        "samples/html-to-pdf-main.js",
+        "samples/html-to-pdf-headers-and-footers.js",
+        "samples/pdf-merge.js",
+        "samples/pdf-to-text.js",
+        "samples/search-pdf.js"
+    ],
+    "keywords": [
+        "html-to-pdf",
+        "pdf-merge",
+        "pdf-to-text",
+        "html-to-pdf-api",
+        "pdf",
+        "pdf-generator",
+        "pdf-converter"
+    ],
+    "description": "SelectPdf Online REST API is a professional solution for managing PDF documents online.",
+    "homepage": "https://selectpdf.com",
+    "author": "SelectPdf <support@selectpdf.com> (https://selectpdf.com/html-to-pdf-api/)",
+    "main": "./lib/selectpdf",
+    "license": "MIT"
+}
