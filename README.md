@@ -47,6 +47,7 @@ Sign up for for free to get instant API access to SelectPdf [HTML to PDF API](ht
 
 ### Sample Code
 
+```javascript
     var selectpdf = require('selectpdf');
 
     console.log("This is SelectPdf-%s.", selectpdf.CLIENT_VERSION);
@@ -76,6 +77,7 @@ Sign up for for free to get instant API access to SelectPdf [HTML to PDF API](ht
     catch (ex) {
         console.log("An error occurred: " + ex);
     }
+```
 
 ## Pdf Merge API
 
@@ -93,6 +95,7 @@ See [PDF Merge API](https://selectpdf.com/pdf-merge-api/) page for full list of 
 
 ### Sample Code
 
+```javascript
     var selectpdf = require('selectpdf');
 
     console.log("This is SelectPdf-%s.", selectpdf.CLIENT_VERSION);
@@ -128,6 +131,7 @@ See [PDF Merge API](https://selectpdf.com/pdf-merge-api/) page for full list of 
     catch (ex) {
         console.log("An error occurred: " + ex);
     }
+```
 
 ## Pdf To Text API
 
@@ -145,6 +149,7 @@ See [Pdf To Text API](https://selectpdf.com/pdf-to-text-api/) page for full list
 
 ### Sample Code
 
+```javascript
     var selectpdf = require('selectpdf');
 
     console.log("This is SelectPdf-%s.", selectpdf.CLIENT_VERSION);
@@ -177,3 +182,4 @@ See [Pdf To Text API](https://selectpdf.com/pdf-to-text-api/) page for full list
     catch (ex) {
         console.log("An error occurred: " + ex);
     }
+```
