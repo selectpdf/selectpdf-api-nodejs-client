@@ -5,6 +5,7 @@ console.log("This is SelectPdf-%s.", selectpdf.CLIENT_VERSION);
 try {
     var testUrl = 'https://selectpdf.com/demo/files/selectpdf.pdf';
     var testPdf = 'Input.pdf';
+    var localFile = 'Result.txt';
     var apiKey = 'Your API key here';
 
     var client = new selectpdf.PdfToTextClient(apiKey);

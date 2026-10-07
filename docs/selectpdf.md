@@ -7,327 +7,444 @@
 *   [ApiException][3]
     *   [Parameters][4]
     *   [toString][5]
-*   [ApiClient][6]
-    *   [apiEndpoint][7]
-    *   [apiAsyncEndpoint][8]
-    *   [apiWebElementsEndpoint][9]
-    *   [parameters][10]
-    *   [headers][11]
-    *   [files][12]
-    *   [binaryData][13]
-    *   [numberOfPages][14]
-    *   [jobId][15]
-    *   [lastHTTPCode][16]
-    *   [AsyncCallsPingInterval][17]
-    *   [AsyncCallsMaxPings][18]
-    *   [performPost][19]
-        *   [Parameters][20]
-    *   [performPostAsMultipartFormData][21]
-        *   [Parameters][22]
-    *   [encodeMultipartFormData][23]
-    *   [startAsyncJob][24]
-        *   [Parameters][25]
-    *   [startAsyncJobMultipartFormData][26]
-        *   [Parameters][27]
-    *   [getNumberOfPages][28]
-    *   [serializeBoolean][29]
-        *   [Parameters][30]
-*   [HtmlToPdfClient][31]
-    *   [Parameters][32]
-    *   [Examples][33]
-    *   [convertUrl][34]
-        *   [Parameters][35]
-    *   [convertUrlToFile][36]
-        *   [Parameters][37]
-    *   [convertUrlAsync][38]
-        *   [Parameters][39]
-    *   [convertUrlToFileAsync][40]
-        *   [Parameters][41]
-    *   [convertHtmlStringWithBaseUrl][42]
-        *   [Parameters][43]
-    *   [convertHtmlStringWithBaseUrlToFile][44]
-        *   [Parameters][45]
-    *   [convertHtmlStringWithBaseUrlAsync][46]
-        *   [Parameters][47]
-    *   [convertHtmlStringWithBaseUrlToFileAsync][48]
-        *   [Parameters][49]
-    *   [convertHtmlString][50]
-        *   [Parameters][51]
-    *   [convertHtmlStringToFile][52]
-        *   [Parameters][53]
-    *   [convertHtmlStringAsync][54]
-        *   [Parameters][55]
-    *   [convertHtmlStringToFileAsync][56]
+*   [DemoRateLimitException][6]
+    *   [Parameters][7]
+    *   [statusCode][8]
+    *   [reason][9]
+    *   [retryAfter][10]
+    *   [upgradeUrl][11]
+    *   [responseBody][12]
+*   [DemoSafetyException][13]
+    *   [Parameters][14]
+    *   [statusCode][15]
+    *   [field][16]
+    *   [reason][17]
+    *   [responseBody][18]
+*   [DemoUnsupportedException][19]
+    *   [Parameters][20]
+    *   [statusCode][21]
+    *   [field][22]
+    *   [upgradeUrl][23]
+    *   [responseBody][24]
+*   [PageSize][25]
+*   [PageOrientation][26]
+*   [RenderingEngine][27]
+*   [SecureProtocol][28]
+*   [PageLayout][29]
+*   [PageMode][30]
+*   [PageNumbersAlignment][31]
+*   [StartupMode][32]
+*   [TextLayout][33]
+*   [OutputFormat][34]
+*   [PdfStandard][35]
+*   [ZugferdProfile][36]
+*   [ZugferdRelationship][37]
+*   [ZugferdSchema][38]
+*   [ApiClient][39]
+    *   [apiEndpoint][40]
+    *   [apiAsyncEndpoint][41]
+    *   [apiWebElementsEndpoint][42]
+    *   [parameters][43]
+    *   [headers][44]
+    *   [files][45]
+    *   [binaryData][46]
+    *   [numberOfPages][47]
+    *   [jobId][48]
+    *   [lastHTTPCode][49]
+    *   [creditsTotal][50]
+    *   [creditsRemaining][51]
+    *   [mode][52]
+    *   [executionMode][53]
+    *   [AsyncCallsPingInterval][54]
+    *   [AsyncCallsMaxPings][55]
+    *   [setApiEndpoint][56]
         *   [Parameters][57]
-    *   [setPageSize][58]
+    *   [setApiAsyncEndpoint][58]
         *   [Parameters][59]
-    *   [setPageWidth][60]
+    *   [setApiWebElementsEndpoint][60]
         *   [Parameters][61]
-    *   [setPageHeight][62]
-        *   [Parameters][63]
-    *   [setPageOrientation][64]
-        *   [Parameters][65]
-    *   [setMarginTop][66]
-        *   [Parameters][67]
-    *   [setMarginRight][68]
-        *   [Parameters][69]
-    *   [setMarginBottom][70]
-        *   [Parameters][71]
-    *   [setMarginLeft][72]
-        *   [Parameters][73]
-    *   [setMargins][74]
+    *   [resetResults][62]
+    *   [readStandardResponseHeaders][63]
+        *   [Parameters][64]
+    *   [onResponseHeadersReceived][65]
+        *   [Parameters][66]
+    *   [performRequest][67]
+        *   [Parameters][68]
+    *   [performPost][69]
+        *   [Parameters][70]
+    *   [performPostAsMultipartFormData][71]
+        *   [Parameters][72]
+    *   [encodeMultipartFormData][73]
+    *   [startAsyncJob][74]
         *   [Parameters][75]
-    *   [setPdfName][76]
+    *   [startAsyncJobMultipartFormData][76]
         *   [Parameters][77]
-    *   [setRenderingEngine][78]
+    *   [runAsyncJob][78]
         *   [Parameters][79]
-    *   [setUserPassword][80]
-        *   [Parameters][81]
-    *   [setOwnerPassword][82]
-        *   [Parameters][83]
-    *   [setWebPageWidth][84]
-        *   [Parameters][85]
-    *   [setWebPageHeight][86]
-        *   [Parameters][87]
-    *   [setMinLoadTime][88]
-        *   [Parameters][89]
-    *   [setConversionDelay][90]
-        *   [Parameters][91]
-    *   [setMaxLoadTime][92]
-        *   [Parameters][93]
-    *   [setNavigationTimeout][94]
+    *   [getNumberOfPages][80]
+    *   [getCreditsTotal][81]
+    *   [getCreditsRemaining][82]
+    *   [getMode][83]
+    *   [getExecutionMode][84]
+    *   [serializeBoolean][85]
+        *   [Parameters][86]
+*   [HtmlToPdfClient][87]
+    *   [Parameters][88]
+    *   [Examples][89]
+    *   [demoMode][90]
+    *   [clampedFields][91]
+    *   [droppedFields][92]
+    *   [resetResults][93]
+    *   [onResponseHeadersReceived][94]
         *   [Parameters][95]
-    *   [setSecureProtocol][96]
-        *   [Parameters][97]
-    *   [setUseCssPrint][98]
-        *   [Parameters][99]
-    *   [setBackgroundColor][100]
-        *   [Parameters][101]
-    *   [setDrawHtmlBackground][102]
+    *   [isDemoMode][96]
+    *   [isDemoResponse][97]
+    *   [getClampedFields][98]
+    *   [wasClamped][99]
+    *   [getDroppedFields][100]
+    *   [wasAnyFieldDropped][101]
+    *   [convertUrl][102]
         *   [Parameters][103]
-    *   [setDisableJavascript][104]
+    *   [convertUrlToFile][104]
         *   [Parameters][105]
-    *   [setDisableInternalLinks][106]
+    *   [convertUrlAsync][106]
         *   [Parameters][107]
-    *   [setDisableExternalLinks][108]
+    *   [convertUrlToFileAsync][108]
         *   [Parameters][109]
-    *   [setRenderOnTimeout][110]
+    *   [convertHtmlStringWithBaseUrl][110]
         *   [Parameters][111]
-    *   [setKeepImagesTogether][112]
+    *   [convertHtmlStringWithBaseUrlToFile][112]
         *   [Parameters][113]
-    *   [setDocTitle][114]
+    *   [convertHtmlStringWithBaseUrlAsync][114]
         *   [Parameters][115]
-    *   [setDocSubject][116]
+    *   [convertHtmlStringWithBaseUrlToFileAsync][116]
         *   [Parameters][117]
-    *   [setDocKeywords][118]
+    *   [convertHtmlString][118]
         *   [Parameters][119]
-    *   [setDocAuthor][120]
+    *   [convertHtmlStringToFile][120]
         *   [Parameters][121]
-    *   [setDocAddCreationDate][122]
+    *   [convertHtmlStringAsync][122]
         *   [Parameters][123]
-    *   [setViewerPageLayout][124]
+    *   [convertHtmlStringToFileAsync][124]
         *   [Parameters][125]
-    *   [setViewerPageMode][126]
+    *   [setPageSize][126]
         *   [Parameters][127]
-    *   [setViewerCenterWindow][128]
+    *   [setPageWidth][128]
         *   [Parameters][129]
-    *   [setViewerDisplayDocTitle][130]
+    *   [setPageHeight][130]
         *   [Parameters][131]
-    *   [setViewerFitWindow][132]
+    *   [setPageOrientation][132]
         *   [Parameters][133]
-    *   [setViewerHideMenuBar][134]
+    *   [setMarginTop][134]
         *   [Parameters][135]
-    *   [setViewerHideToolbar][136]
+    *   [setMarginRight][136]
         *   [Parameters][137]
-    *   [setViewerHideWindowUI][138]
+    *   [setMarginBottom][138]
         *   [Parameters][139]
-    *   [setShowHeader][140]
+    *   [setMarginLeft][140]
         *   [Parameters][141]
-    *   [setHeaderHeight][142]
+    *   [setMargins][142]
         *   [Parameters][143]
-    *   [setHeaderUrl][144]
+    *   [setPdfName][144]
         *   [Parameters][145]
-    *   [setHeaderHtml][146]
+    *   [setRenderingEngine][146]
         *   [Parameters][147]
-    *   [setHeaderBaseUrl][148]
+    *   [setTagged][148]
         *   [Parameters][149]
-    *   [setHeaderDisplayOnFirstPage][150]
+    *   [setPdfStandard][150]
         *   [Parameters][151]
-    *   [setHeaderDisplayOnOddPages][152]
+    *   [setDocumentLanguage][152]
         *   [Parameters][153]
-    *   [setHeaderDisplayOnEvenPages][154]
+    *   [setUserPassword][154]
         *   [Parameters][155]
-    *   [setHeaderWebPageWidth][156]
+    *   [setOwnerPassword][156]
         *   [Parameters][157]
-    *   [setHeaderWebPageHeight][158]
+    *   [setWebPageWidth][158]
         *   [Parameters][159]
-    *   [setShowFooter][160]
+    *   [setWebPageHeight][160]
         *   [Parameters][161]
-    *   [setFooterHeight][162]
+    *   [setWebPageFixedSize][162]
         *   [Parameters][163]
-    *   [setFooterUrl][164]
+    *   [setMinLoadTime][164]
         *   [Parameters][165]
-    *   [setFooterHtml][166]
+    *   [setConversionDelay][166]
         *   [Parameters][167]
-    *   [setFooterBaseUrl][168]
+    *   [setMaxLoadTime][168]
         *   [Parameters][169]
-    *   [setFooterDisplayOnFirstPage][170]
+    *   [setNavigationTimeout][170]
         *   [Parameters][171]
-    *   [setFooterDisplayOnOddPages][172]
+    *   [setSecureProtocol][172]
         *   [Parameters][173]
-    *   [setFooterDisplayOnEvenPages][174]
+    *   [setUseCssPrint][174]
         *   [Parameters][175]
-    *   [setFooterDisplayOnLastPage][176]
+    *   [setBackgroundColor][176]
         *   [Parameters][177]
-    *   [setFooterWebPageWidth][178]
+    *   [setDrawHtmlBackground][178]
         *   [Parameters][179]
-    *   [setFooterWebPageHeight][180]
+    *   [setDisableJavascript][180]
         *   [Parameters][181]
-    *   [setShowPageNumbers][182]
+    *   [setDisableInternalLinks][182]
         *   [Parameters][183]
-    *   [setPageNumbersFirst][184]
+    *   [setDisableExternalLinks][184]
         *   [Parameters][185]
-    *   [setPageNumbersOffset][186]
+    *   [setRenderOnTimeout][186]
         *   [Parameters][187]
-    *   [setPageNumbersTemplate][188]
+    *   [setKeepImagesTogether][188]
         *   [Parameters][189]
-    *   [setPageNumbersFontName][190]
+    *   [setDocTitle][190]
         *   [Parameters][191]
-    *   [setPageNumbersFontSize][192]
+    *   [setDocSubject][192]
         *   [Parameters][193]
-    *   [setPageNumbersAlignment][194]
+    *   [setDocKeywords][194]
         *   [Parameters][195]
-    *   [setPageNumbersColor][196]
+    *   [setDocAuthor][196]
         *   [Parameters][197]
-    *   [setPageNumbersVerticalPosition][198]
+    *   [setDocAddCreationDate][198]
         *   [Parameters][199]
-    *   [setPdfBookmarksSelectors][200]
+    *   [setViewerPageLayout][200]
         *   [Parameters][201]
-    *   [setPdfHideElements][202]
+    *   [setViewerPageMode][202]
         *   [Parameters][203]
-    *   [setPdfShowOnlyElementID][204]
+    *   [setViewerCenterWindow][204]
         *   [Parameters][205]
-    *   [setPdfWebElementsSelectors][206]
+    *   [setViewerDisplayDocTitle][206]
         *   [Parameters][207]
-    *   [setStartupMode][208]
+    *   [setViewerFitWindow][208]
         *   [Parameters][209]
-    *   [setSkipDecoding][210]
+    *   [setViewerHideMenuBar][210]
         *   [Parameters][211]
-    *   [setScaleImages][212]
+    *   [setViewerHideToolbar][212]
         *   [Parameters][213]
-    *   [setSinglePagePdf][214]
+    *   [setViewerHideWindowUI][214]
         *   [Parameters][215]
-    *   [setPageBreaksEnhancedAlgorithm][216]
+    *   [setShowHeader][216]
         *   [Parameters][217]
-    *   [setCookies][218]
+    *   [setHeaderHeight][218]
         *   [Parameters][219]
-    *   [setCustomParameter][220]
+    *   [setHeaderUrl][220]
         *   [Parameters][221]
-    *   [getWebElements][222]
+    *   [setHeaderHtml][222]
         *   [Parameters][223]
-*   [UsageClient][224]
-    *   [Parameters][225]
-    *   [getUsage][226]
+    *   [setHeaderBaseUrl][224]
+        *   [Parameters][225]
+    *   [setHeaderDisplayOnFirstPage][226]
         *   [Parameters][227]
-*   [WebElementsClient][228]
-    *   [Parameters][229]
-    *   [getWebElements][230]
+    *   [setHeaderDisplayOnOddPages][228]
+        *   [Parameters][229]
+    *   [setHeaderDisplayOnEvenPages][230]
         *   [Parameters][231]
-*   [AsyncJobClient][232]
-    *   [Parameters][233]
-    *   [getResult][234]
+    *   [setHeaderWebPageWidth][232]
+        *   [Parameters][233]
+    *   [setHeaderWebPageHeight][234]
         *   [Parameters][235]
-    *   [finished][236]
-*   [PdfMergeClient][237]
-    *   [Parameters][238]
-    *   [Examples][239]
-    *   [addFile][240]
+    *   [setShowFooter][236]
+        *   [Parameters][237]
+    *   [setFooterHeight][238]
+        *   [Parameters][239]
+    *   [setFooterUrl][240]
         *   [Parameters][241]
-    *   [addUrlFile][242]
+    *   [setFooterHtml][242]
         *   [Parameters][243]
-    *   [save][244]
+    *   [setFooterBaseUrl][244]
         *   [Parameters][245]
-    *   [saveToFile][246]
+    *   [setFooterDisplayOnFirstPage][246]
         *   [Parameters][247]
-    *   [saveAsync][248]
+    *   [setFooterDisplayOnOddPages][248]
         *   [Parameters][249]
-    *   [saveToFileAsync][250]
+    *   [setFooterDisplayOnEvenPages][250]
         *   [Parameters][251]
-    *   [setDocTitle][252]
+    *   [setFooterDisplayOnLastPage][252]
         *   [Parameters][253]
-    *   [setDocSubject][254]
+    *   [setFooterWebPageWidth][254]
         *   [Parameters][255]
-    *   [setDocKeywords][256]
+    *   [setFooterWebPageHeight][256]
         *   [Parameters][257]
-    *   [setDocAuthor][258]
+    *   [setShowPageNumbers][258]
         *   [Parameters][259]
-    *   [setDocAddCreationDate][260]
+    *   [setPageNumbersFirst][260]
         *   [Parameters][261]
-    *   [setViewerPageLayout][262]
+    *   [setPageNumbersOffset][262]
         *   [Parameters][263]
-    *   [setViewerPageMode][264]
+    *   [setPageNumbersTemplate][264]
         *   [Parameters][265]
-    *   [setViewerCenterWindow][266]
+    *   [setPageNumbersFontName][266]
         *   [Parameters][267]
-    *   [setViewerDisplayDocTitle][268]
+    *   [setPageNumbersFontSize][268]
         *   [Parameters][269]
-    *   [setViewerFitWindow][270]
+    *   [setPageNumbersAlignment][270]
         *   [Parameters][271]
-    *   [setViewerHideMenuBar][272]
+    *   [setPageNumbersColor][272]
         *   [Parameters][273]
-    *   [setViewerHideToolbar][274]
+    *   [setPageNumbersVerticalPosition][274]
         *   [Parameters][275]
-    *   [setViewerHideWindowUI][276]
+    *   [setPdfBookmarksSelectors][276]
         *   [Parameters][277]
-    *   [setUserPassword][278]
+    *   [setPdfHideElements][278]
         *   [Parameters][279]
-    *   [setOwnerPassword][280]
+    *   [setPdfShowOnlyElementID][280]
         *   [Parameters][281]
-    *   [setTimeout][282]
+    *   [setPdfWebElementsSelectors][282]
         *   [Parameters][283]
-    *   [setCustomParameter][284]
+    *   [setStartupMode][284]
         *   [Parameters][285]
-*   [PdfToTextClient][286]
-    *   [Parameters][287]
-    *   [Examples][288]
-    *   [getTextFromFile][289]
-        *   [Parameters][290]
-    *   [getTextFromFileToFile][291]
-        *   [Parameters][292]
-    *   [getTextFromFileAsync][293]
-        *   [Parameters][294]
-    *   [getTextFromFileToFileAsync][295]
-        *   [Parameters][296]
-    *   [getTextFromUrl][297]
-        *   [Parameters][298]
-    *   [getTextFromUrlToFile][299]
-        *   [Parameters][300]
-    *   [getTextFromUrlAsync][301]
-        *   [Parameters][302]
-    *   [getTextFromUrlToFileAsync][303]
-        *   [Parameters][304]
-    *   [searchFile][305]
-        *   [Parameters][306]
-    *   [searchFileAsync][307]
+    *   [setSkipDecoding][286]
+        *   [Parameters][287]
+    *   [setScaleImages][288]
+        *   [Parameters][289]
+    *   [setSinglePagePdf][290]
+        *   [Parameters][291]
+    *   [setPageBreaksEnhancedAlgorithm][292]
+        *   [Parameters][293]
+    *   [setCookies][294]
+        *   [Parameters][295]
+    *   [setAuthUsername][296]
+        *   [Parameters][297]
+    *   [setAuthPassword][298]
+        *   [Parameters][299]
+    *   [setCustomParameter][300]
+        *   [Parameters][301]
+    *   [getWebElements][302]
+        *   [Parameters][303]
+*   [InvoiceClient][304]
+    *   [Parameters][305]
+    *   [Examples][306]
+    *   [setInvoiceXmlFile][307]
         *   [Parameters][308]
-    *   [searchUrl][309]
+    *   [setInvoiceXml][309]
         *   [Parameters][310]
-    *   [searchUrlAsync][311]
+    *   [setZugferdProfile][311]
         *   [Parameters][312]
-    *   [setStartPage][313]
+    *   [setZugferdRelationship][313]
         *   [Parameters][314]
-    *   [setEndPage][315]
+    *   [setZugferdSchema][315]
         *   [Parameters][316]
-    *   [setUserPassword][317]
+    *   [createFromUrl][317]
         *   [Parameters][318]
-    *   [setTextLayout][319]
+    *   [createFromUrlToFile][319]
         *   [Parameters][320]
-    *   [setOutputFormat][321]
+    *   [createFromHtmlStringWithBaseUrl][321]
         *   [Parameters][322]
-    *   [setTimeout][323]
+    *   [createFromHtmlStringWithBaseUrlToFile][323]
         *   [Parameters][324]
-    *   [setCustomParameter][325]
+    *   [createFromHtmlString][325]
         *   [Parameters][326]
+    *   [createFromHtmlStringToFile][327]
+        *   [Parameters][328]
+    *   [createFromUrlAsync][329]
+        *   [Parameters][330]
+    *   [createFromUrlToFileAsync][331]
+        *   [Parameters][332]
+    *   [createFromHtmlStringWithBaseUrlAsync][333]
+        *   [Parameters][334]
+    *   [createFromHtmlStringWithBaseUrlToFileAsync][335]
+        *   [Parameters][336]
+    *   [createFromHtmlStringAsync][337]
+        *   [Parameters][338]
+    *   [createFromHtmlStringToFileAsync][339]
+        *   [Parameters][340]
+*   [UsageClient][341]
+    *   [Parameters][342]
+    *   [getUsage][343]
+        *   [Parameters][344]
+*   [WebElementsClient][345]
+    *   [Parameters][346]
+    *   [getWebElements][347]
+        *   [Parameters][348]
+*   [AsyncJobClient][349]
+    *   [Parameters][350]
+    *   [getResult][351]
+        *   [Parameters][352]
+    *   [finished][353]
+*   [PdfMergeClient][354]
+    *   [Parameters][355]
+    *   [Examples][356]
+    *   [addFile][357]
+        *   [Parameters][358]
+    *   [addUrlFile][359]
+        *   [Parameters][360]
+    *   [save][361]
+        *   [Parameters][362]
+    *   [saveToFile][363]
+        *   [Parameters][364]
+    *   [saveAsync][365]
+        *   [Parameters][366]
+    *   [saveToFileAsync][367]
+        *   [Parameters][368]
+    *   [setDocTitle][369]
+        *   [Parameters][370]
+    *   [setDocSubject][371]
+        *   [Parameters][372]
+    *   [setDocKeywords][373]
+        *   [Parameters][374]
+    *   [setDocAuthor][375]
+        *   [Parameters][376]
+    *   [setDocAddCreationDate][377]
+        *   [Parameters][378]
+    *   [setViewerPageLayout][379]
+        *   [Parameters][380]
+    *   [setViewerPageMode][381]
+        *   [Parameters][382]
+    *   [setViewerCenterWindow][383]
+        *   [Parameters][384]
+    *   [setViewerDisplayDocTitle][385]
+        *   [Parameters][386]
+    *   [setViewerFitWindow][387]
+        *   [Parameters][388]
+    *   [setViewerHideMenuBar][389]
+        *   [Parameters][390]
+    *   [setViewerHideToolbar][391]
+        *   [Parameters][392]
+    *   [setViewerHideWindowUI][393]
+        *   [Parameters][394]
+    *   [setUserPassword][395]
+        *   [Parameters][396]
+    *   [setOwnerPassword][397]
+        *   [Parameters][398]
+    *   [setTimeout][399]
+        *   [Parameters][400]
+    *   [setCustomParameter][401]
+        *   [Parameters][402]
+*   [PdfToTextClient][403]
+    *   [Parameters][404]
+    *   [Examples][405]
+    *   [getTextFromFile][406]
+        *   [Parameters][407]
+    *   [getTextFromFileToFile][408]
+        *   [Parameters][409]
+    *   [getTextFromFileAsync][410]
+        *   [Parameters][411]
+    *   [getTextFromFileToFileAsync][412]
+        *   [Parameters][413]
+    *   [getTextFromUrl][414]
+        *   [Parameters][415]
+    *   [getTextFromUrlToFile][416]
+        *   [Parameters][417]
+    *   [getTextFromUrlAsync][418]
+        *   [Parameters][419]
+    *   [getTextFromUrlToFileAsync][420]
+        *   [Parameters][421]
+    *   [searchFile][422]
+        *   [Parameters][423]
+    *   [searchFileAsync][424]
+        *   [Parameters][425]
+    *   [searchUrl][426]
+        *   [Parameters][427]
+    *   [searchUrlAsync][428]
+        *   [Parameters][429]
+    *   [setStartPage][430]
+        *   [Parameters][431]
+    *   [setEndPage][432]
+        *   [Parameters][433]
+    *   [setUserPassword][434]
+        *   [Parameters][435]
+    *   [setTextLayout][436]
+        *   [Parameters][437]
+    *   [setOutputFormat][438]
+        *   [Parameters][439]
+    *   [setTimeout][440]
+        *   [Parameters][441]
+    *   [setCustomParameter][442]
+        *   [Parameters][443]
 
 ##
 
@@ -335,13 +452,17 @@ SelectPdf cloud REST API is a platform independent PDF manipulation API.
 As a true REST API, it can be used with any language: .NET, Java, PHP, Python, Go, Ruby and many more.
 We are presenting here the dedicated Node.js client library for SelectPdf API.
 
-Using the SelectPdf Online REST API Ruby client library you can easily take advance of the API features offered by SelectPdf:
+Using the SelectPdf Online REST API Node.js client library you can easily take advance of the API features offered by SelectPdf:
 
-[HTML to PDF REST API][327] - SelectPdf HTML To PDF Online REST API is a professional solution that lets you create PDF from web pages and raw HTML code in your applications.
+[HTML to PDF REST API][444] - SelectPdf HTML To PDF Online REST API is a professional solution that lets you create PDF from web pages and raw HTML code in your applications.
 
-[PDF To Text REST API][328] - SelectPdf Pdf To Text REST API is an online solution that lets you extract text from your PDF documents or search your PDF document for certain words.
+[PDF To Text REST API][445] - SelectPdf Pdf To Text REST API is an online solution that lets you extract text from your PDF documents or search your PDF document for certain words.
 
-[Pdf Merge REST API][329] - SelectPdf Pdf Merge REST API is an online solution that lets you merge local or remote PDFs into a final PDF document.
+[Pdf Merge REST API][446] - SelectPdf Pdf Merge REST API is an online solution that lets you merge local or remote PDFs into a final PDF document.
+
+Electronic invoices - InvoiceClient creates ZUGFeRD / Factur-X hybrid electronic invoices: one PDF/A-3 document carrying both the visible invoice and the invoice XML.
+
+Keyless demo - construct HtmlToPdfClient without an API key to try the HTML to PDF API with no signup (watermarked output, capped at 5 pages).
 
 ### Examples
 
@@ -474,9 +595,190 @@ Get complete error message.
 
 Returns **any** Error message.
 
+## DemoRateLimitException
+
+Exception raised when the keyless demo endpoint rate-limits the request (HTTP 429, or HTTP 503 when the demo is at capacity).
+It is passed to the callback as the err parameter. Catch it with `err instanceof selectpdf.DemoRateLimitException`.
+
+### Parameters
+
+*   `statusCode`  HTTP status code of the response (429 or 503).
+*   `reason`  Rate limit reason reported by the server: per_ip, daily_cap or concurrency.
+*   `retryAfter`  Number of seconds to wait before retrying, from the Retry-After response header. 0 when the header is absent.
+*   `upgradeUrl`  Url where a paid API key can be obtained.
+*   `responseBody`  Raw JSON body of the error response.
+
+### statusCode
+
+HTTP status code of the response (429 or 503).
+
+### reason
+
+Rate limit reason reported by the server: per_ip, daily_cap or concurrency.
+
+### retryAfter
+
+Number of seconds to wait before retrying. 0 when the server did not send a Retry-After header.
+
+### upgradeUrl
+
+Url where a paid API key can be obtained.
+
+### responseBody
+
+Raw JSON body of the error response.
+
+## DemoSafetyException
+
+Exception raised when the demo endpoint safety guard rejects a url (HTTP 400).
+Demo conversions can only fetch public hosts - internal and private addresses are rejected.
+It is passed to the callback as the err parameter. Catch it with `err instanceof selectpdf.DemoSafetyException`.
+
+### Parameters
+
+*   `statusCode`  HTTP status code of the response (400).
+*   `field`  Name of the parameter that was rejected (for example url, header_url, footer_url).
+*   `reason`  Reason reported by the server (for example private_ip).
+*   `responseBody`  Raw JSON body of the error response.
+
+### statusCode
+
+HTTP status code of the response (400).
+
+### field
+
+Name of the parameter that was rejected.
+
+### reason
+
+Reason reported by the server.
+
+### responseBody
+
+Raw JSON body of the error response.
+
+## DemoUnsupportedException
+
+Exception raised when a feature is not available in demo mode.
+It is raised by the server (HTTP 400) or directly by the client library, before any request is made,
+when setUserPassword, setOwnerPassword or an asynchronous conversion is used on a client constructed without an API key.
+The client library raises it from setters with throw and from conversion methods through the callback err parameter.
+Catch it with `err instanceof selectpdf.DemoUnsupportedException`.
+
+### Parameters
+
+*   `statusCode`  HTTP status code of the response (400). When the exception is raised by the client library, call it with a single parameter: the name of the unsupported field.
+*   `field`  Name of the unsupported parameter (for example user_password, owner_password, async).
+*   `upgradeUrl`  Url where a paid API key can be obtained.
+*   `responseBody`  Raw JSON body of the error response.
+
+### statusCode
+
+HTTP status code of the response (400). 0 when the exception was raised by the client library, before any request was made.
+
+### field
+
+Name of the unsupported parameter.
+
+### upgradeUrl
+
+Url where a paid API key can be obtained.
+
+### responseBody
+
+Raw JSON body of the error response. Null when the exception was raised by the client library.
+
+## PageSize
+
+PDF page size.
+
+Values: Custom, A0, A1, A2, A3, A4, A5, A6, A7, A8, Letter, HalfLetter, Ledger, Legal.
+
+## PageOrientation
+
+PDF page orientation.
+
+Values: Portrait, Landscape.
+
+## RenderingEngine
+
+Rendering engine used for the HTML to PDF conversion.
+
+Values: WebKit, Restricted, Blink, Chromium.
+
+## SecureProtocol
+
+Protocol used for secure (HTTPS) connections.
+
+Values: Tls11OrNewer (0), Tls10 (1), Ssl3 (2).
+
+## PageLayout
+
+The page layout to be used when the pdf document is opened in a viewer.
+
+Values: SinglePage (0), OneColumn (1), TwoColumnLeft (2), TwoColumnRight (3).
+
+## PageMode
+
+The PDF document's page mode when it is opened in a viewer.
+
+Values: UseNone (0), UseOutlines (1), UseThumbs (2), FullScreen (3), UseOC (4), UseAttachments (5).
+
+## PageNumbersAlignment
+
+Alignment of the page numbers text.
+
+Values: Left (1), Center (2), Right (3).
+
+## StartupMode
+
+Converter startup mode.
+
+Values: Automatic, Manual.
+
+## TextLayout
+
+The text layout of the text extracted from a PDF.
+
+Values: Original (0), Reading (1).
+
+## OutputFormat
+
+The output format of the text extracted from a PDF.
+
+Values: Text (0), Html (1).
+
+## PdfStandard
+
+PDF conformance target for the generated document.
+Tagged standards (PdfA3A) require the Blink or Chromium rendering engine.
+When no engine is specified the API promotes the request to Chromium and reports the engine used in the X-SelectPdf-Engine response header.
+
+Values: Full, PdfA, PdfA2B, PdfA3A, PdfA3B, PdfA3U, PdfX, PdfSiqQ_A, PdfSiqQ_B.
+
+## ZugferdProfile
+
+The data profile of a ZUGFeRD / Factur-X hybrid electronic invoice.
+The profile determines how much of the EN 16931 semantic model the embedded XML carries.
+
+Values: Minimum, Basic_WL, Basic, En16931, Extended, XRechnung.
+
+## ZugferdRelationship
+
+How the embedded invoice XML relates to the visible invoice page.
+When not set, the API derives this from the profile: Alternative for Minimum and Basic_WL, Data for the rest.
+
+Values: Data, Alternative, Source, Supplement.
+
+## ZugferdSchema
+
+The metadata schema used to identify a hybrid invoice inside the PDF.
+
+Values: FacturX10, Zugferd20.
+
 ## ApiClient
 
-Base constructor for API clients. Do not use this directly. Use instead [HtmlToPdfClient][31], [PdfMergeClient][237], [PdfToTextClient][286], etc.
+Base constructor for API clients. Do not use this directly. Use instead [HtmlToPdfClient][87], [PdfMergeClient][354], [PdfToTextClient][403], etc.
 
 ### apiEndpoint
 
@@ -518,6 +820,26 @@ Job ID for asynchronous calls or for calls that require a second request.
 
 Last HTTP Code
 
+### creditsTotal
+
+Subscription monthly conversion limit, parsed from the X-SelectPdf-Credits-Total response header.
+-1 means unlimited. Null when the most recent response did not include it (demo endpoint, error responses).
+
+### creditsRemaining
+
+Conversions remaining in the current month, parsed from the X-SelectPdf-Credits-Remaining response header.
+-1 means unlimited. Null when the most recent response did not include it.
+
+### mode
+
+Endpoint mode of the most recent response, parsed from the X-SelectPdf-Mode response header: "production" or "demo".
+Empty string when the header is absent.
+
+### executionMode
+
+Server-side execution path of the most recent response, parsed from the X-SelectPdf-Execution response header: "in-process" or "worker".
+Empty string when the header is absent.
+
 ### AsyncCallsPingInterval
 
 Ping interval in seconds for asynchronous calls. Default value is 3 seconds.
@@ -525,6 +847,62 @@ Ping interval in seconds for asynchronous calls. Default value is 3 seconds.
 ### AsyncCallsMaxPings
 
 Maximum number of pings for asynchronous calls. Default value is 1,000 pings.
+
+### setApiEndpoint
+
+Set a custom SelectPdf API endpoint. Do not use this method unless advised by SelectPdf.
+
+#### Parameters
+
+*   `apiEndpoint`  API endpoint.
+
+### setApiAsyncEndpoint
+
+Set a custom SelectPdf API endpoint for async jobs. Do not use this method unless advised by SelectPdf.
+
+#### Parameters
+
+*   `apiAsyncEndpoint`  API async jobs endpoint.
+
+### setApiWebElementsEndpoint
+
+Set a custom SelectPdf API endpoint for web elements. Do not use this method unless advised by SelectPdf.
+
+#### Parameters
+
+*   `apiWebElementsEndpoint`  API web elements endpoint.
+
+### resetResults
+
+Reset the results of the previous API call (number of pages, job id, response telemetry).
+
+### readStandardResponseHeaders
+
+Read the standard SelectPdf response headers (X-SelectPdf-Pages, X-SelectPdf-Job-Id, X-SelectPdf-Credits-Total,
+X-SelectPdf-Credits-Remaining, X-SelectPdf-Mode, X-SelectPdf-Execution).
+
+#### Parameters
+
+*   `headers`  Response headers.
+
+### onResponseHeadersReceived
+
+Hook called after a successful response (200 OK or 202 Accepted), with the response headers.
+Subclasses override it to capture endpoint-specific headers. The default implementation does nothing.
+
+#### Parameters
+
+*   `headers`  Response headers.
+
+### performRequest
+
+Send a POST request with the specified body and handle the response.
+
+#### Parameters
+
+*   `contentType`  Content type of the request body.
+*   `postData`  Request body (Buffer).
+*   `callback`  Callback function(err, data). err will contain the error, if any. If there is no error, data will contain data received.
 
 ### performPost
 
@@ -546,6 +924,8 @@ Create a multipart/form-data POST request (that can handle file uploads).
 
 Encode data for multipart/form-data POST
 
+Returns **any** Encoded data (Buffer).
+
 ### startAsyncJob
 
 Start an asynchronous job.
@@ -562,11 +942,44 @@ Start an asynchronous job that requires multipart forma data.
 
 *   `callback`  Callback function(err, jobId). err will contain the error message, if any. If there is no error, jobId will be set.
 
+### runAsyncJob
+
+Start an asynchronous job, wait for it to finish and return its result.
+
+#### Parameters
+
+*   `multipartFormData`  Use a multipart/form-data request to start the job (true) or a regular POST (false).
+*   `callback`  Callback function(err, data). err will contain the error, if any. If there is no error, data will contain data received.
+
 ### getNumberOfPages
 
 Get the number of pages of the PDF document resulted from the API call.
 
 Returns **any** Number of pages of the PDF document.
+
+### getCreditsTotal
+
+Get the subscription monthly conversion limit reported by the server (X-SelectPdf-Credits-Total response header).
+
+Returns **any** Monthly conversion limit. -1 means unlimited. Null when the most recent response did not include credit information (demo endpoint, error response).
+
+### getCreditsRemaining
+
+Get the number of conversions remaining in the current month reported by the server (X-SelectPdf-Credits-Remaining response header).
+
+Returns **any** Conversions remaining. -1 means unlimited. Null when the most recent response did not include credit information (demo endpoint, error response).
+
+### getMode
+
+Get the endpoint mode of the most recent response (X-SelectPdf-Mode response header).
+
+Returns **any** "production" or "demo". Empty string when the response did not include the header.
+
+### getExecutionMode
+
+Get the server-side execution path of the most recent response (X-SelectPdf-Execution response header).
+
+Returns **any** "in-process" or "worker". Empty string for endpoints that do not perform a conversion (for example usage).
 
 ### serializeBoolean
 
@@ -582,9 +995,14 @@ Returns **any** Serialized value.
 
 Html To Pdf Conversion with SelectPdf Online API.
 
+Pass a paid API key for production use. Construct the client without an API key, with an empty string, or with "demo" (case insensitive)
+to use the keyless demo endpoint - the output is watermarked and capped at 5 pages and it is always rendered with the Chromium engine,
+but no signup is required. In demo mode setUserPassword, setOwnerPassword and the asynchronous conversions raise DemoUnsupportedException,
+and the demo endpoint can answer with DemoRateLimitException or DemoSafetyException.
+
 ### Parameters
 
-*   `apiKey`  API key.
+*   `apiKey`  API key. Leave it out (or pass null, an empty string or "demo") to use the keyless demo endpoint.
 
 ### Examples
 
@@ -598,25 +1016,25 @@ console.log("This is SelectPdf-%s.", selectpdf.CLIENT_VERSION);
 try {
     var url = 'https://selectpdf.com';
     var localFile = 'Test.pdf'
-    var apiKey = 'Your API key here';
+    var apiKey = 'Your API key here'; // or null to use the keyless demo endpoint
 
     var client = new selectpdf.HtmlToPdfClient(apiKey);
 
     // set parameters - see full list at https://selectpdf.com/html-to-pdf-api/
     client
         // main properties
-        
+
         .setPageSize('A4') // PDF page size
         .setPageOrientation('Portrait') // PDF page orientation
         .setMargins(0) // PDF page margins
-        .setRenderingEngine('WebKit') // rendering engine
+        .setRenderingEngine('WebKit') // rendering engine (demo mode forces Chromium)
         .setConversionDelay(1) // conversion delay
-        .setNavigationTimeout(30) // navigation timeout 
+        .setNavigationTimeout(30) // navigation timeout
         .setShowPageNumbers(false) // page numbers
         .setPageBreaksEnhancedAlgorithm(true) // enhanced page break algorithm
 
         // additional properties
-        
+
         // .setUseCssPrint('True') // enable CSS media print
         // .setDisableJavascript('True') // disable javascript
         // .setDisableInternalLinks('True') // disable internal links
@@ -624,10 +1042,10 @@ try {
         // .setKeepImagesTogether('True') // keep images together
         // .setScaleImages('True') // scale images to create smaller pdfs
         // .setSinglePagePdf('True') // generate a single page PDF
-        // .setUserPassword('password') // secure the PDF with a password
+        // .setUserPassword('password') // secure the PDF with a password (paid keys only)
 
         // generate automatic bookmarks
-        
+
         // .setPdfBookmarksSelectors('H1, H2') // create outlines (bookmarks) for the specified elements
         // .setViewerPageMode(1) // display outlines (bookmarks) in viewer
     ;
@@ -635,16 +1053,14 @@ try {
     console.log("Starting conversion ...");
 
     // convert url to file
-    client.convertUrlToFile(url, localFile, 
+    client.convertUrlToFile(url, localFile,
         function(err, fileName) {
+            if (err instanceof selectpdf.DemoRateLimitException)
+                return console.log("Demo rate limit (" + err.reason + "). Retry after " + err.retryAfter + "s. Upgrade: " + err.upgradeUrl);
             if (err) return console.log("An error occurred: " + err);
-            console.log("Finished! Result is in file '" + fileName + "'. Number of pages: " + client.getNumberOfPages());
 
-            var usageClient = new selectpdf.UsageClient(apiKey);
-            usageClient.getUsage(false, function(err2, data) {
-                if (err2) return console.error("An error occurred getting the usage info: " + err2);
-                console.log("Conversions remained this month: " +  data["available"] + ". Usage: " + JSON.stringify(data));
-            });
+            console.log("Finished! Result is in file '" + fileName + "'. Number of pages: " + client.getNumberOfPages());
+            console.log("Mode: " + client.getMode() + ". Credits remaining: " + client.getCreditsRemaining() + " / " + client.getCreditsTotal() + ".");
         }
     );
 
@@ -653,6 +1069,69 @@ catch (ex) {
     console.log("An error occurred: " + ex);
 }
 ```
+
+### demoMode
+
+True if the client was constructed for the keyless demo endpoint (API key missing, empty or "demo").
+
+### clampedFields
+
+Names of the parameters the demo endpoint clamped on the most recent conversion (X-SelectPdf-Demo-Clamped response header).
+
+### droppedFields
+
+Names of the parameters the demo endpoint dropped on the most recent conversion (X-SelectPdf-Demo-Dropped response header).
+
+### resetResults
+
+Reset the results of the previous API call, including the demo clamped and dropped fields.
+
+### onResponseHeadersReceived
+
+Capture the demo endpoint response headers (clamped and dropped fields).
+
+#### Parameters
+
+*   `headers`  Response headers.
+
+### isDemoMode
+
+Check if the client was constructed for the keyless demo endpoint (API key missing, empty or "demo").
+Set at construction time - changing the endpoint does not change it.
+
+Returns **any** True if the client is in demo mode.
+
+### isDemoResponse
+
+Check if the most recent response came from the demo endpoint (the X-SelectPdf-Mode response header is "demo").
+
+Returns **any** True if the most recent response is a demo response.
+
+### getClampedFields
+
+Get the names of the parameters the demo endpoint clamped on the most recent conversion (for example max_load_time).
+Clamped means the value was modified (capped or force-set), not discarded. Empty for non-demo responses.
+
+Returns **any** List of parameter names.
+
+### wasClamped
+
+Check if the demo endpoint clamped any parameter on the most recent conversion.
+
+Returns **any** True if any parameter was clamped.
+
+### getDroppedFields
+
+Get the names of the parameters the demo endpoint dropped on the most recent conversion (for example auth_username, cookies_string).
+The demo endpoint does not honor auth credentials, cookies, the pdf name, async and the web elements selectors. Empty for non-demo responses.
+
+Returns **any** List of parameter names.
+
+### wasAnyFieldDropped
+
+Check if the demo endpoint dropped any parameter on the most recent conversion.
+
+Returns **any** True if any parameter was dropped.
 
 ### convertUrl
 
@@ -676,6 +1155,7 @@ Convert the specified url to PDF. SelectPdf online API can convert http:// and h
 ### convertUrlAsync
 
 Convert the specified url to PDF using an asynchronous call. SelectPdf online API can convert http:// and https:// publicly available urls.
+Asynchronous calls are not available in demo mode: the callback receives DemoUnsupportedException.
 
 #### Parameters
 
@@ -717,6 +1197,7 @@ Convert the specified HTML string to PDF and writes the resulted PDF to a local 
 ### convertHtmlStringWithBaseUrlAsync
 
 Convert the specified HTML string to PDF with an asynchronous call. Use a base url to resolve relative paths to resources.
+Asynchronous calls are not available in demo mode: the callback receives DemoUnsupportedException.
 
 #### Parameters
 
@@ -880,16 +1361,55 @@ Returns **any** Reference to the current object.
 ### setRenderingEngine
 
 Set the rendering engine used for the HTML to PDF conversion. Default value is WebKit.
+The keyless demo endpoint always uses Chromium.
 
 #### Parameters
 
-*   `renderingEngine`  HTML rendering engine. Allowed values for Rendering Engine: WebKit, Restricted, Blink.
+*   `renderingEngine`  HTML rendering engine. Allowed values for Rendering Engine: WebKit, Restricted, Blink, Chromium (see RenderingEngine).
+
+Returns **any** Reference to the current object.
+
+### setTagged
+
+Produce a tagged, accessible PDF: a logical structure tree covering headings, paragraphs, lists, tables,
+figures with alternate text, links and reading order. Default is False.
+
+Requires the Blink or Chromium rendering engine - the WebKit engines cannot produce a structure tree.
+If no engine is set, the API promotes the request to Chromium and reports it in the X-SelectPdf-Engine response header.
+Setting an explicit WebKit engine together with tagged output is rejected by the API.
+A tagged document also needs a title, so set setDocTitle - the converter falls back to the HTML document title when it is not set.
+
+#### Parameters
+
+*   `tagged`  Produce a tagged, accessible PDF.
+
+Returns **any** Reference to the current object.
+
+### setPdfStandard
+
+Set the PDF conformance target - PDF/A for archiving, PDF/X for graphics exchange, PDF/SiqQ for digital signatures. Default is Full.
+PdfA3A is the accessible level of PDF/A-3: it implies a tagged document, so it carries the same rendering engine requirement as setTagged.
+
+#### Parameters
+
+*   `pdfStandard`  PDF conformance target. Allowed values for PDF Standard: Full, PdfA, PdfA2B, PdfA3A, PdfA3B, PdfA3U, PdfX, PdfSiqQ_A, PdfSiqQ_B (see PdfStandard).
+
+Returns **any** Reference to the current object.
+
+### setDocumentLanguage
+
+Set the natural language of the document, for example "en-US" or "de-DE".
+Written as the PDF /Lang entry and onto tagged structure elements. Default is "en-US".
+
+#### Parameters
+
+*   `documentLanguage`  Language tag, for example "en-US".
 
 Returns **any** Reference to the current object.
 
 ### setUserPassword
 
-Set PDF user password.
+Set PDF user password. Not available in demo mode: throws DemoUnsupportedException if the client was constructed without an API key.
 
 #### Parameters
 
@@ -899,7 +1419,7 @@ Returns **any** Reference to the current object.
 
 ### setOwnerPassword
 
-Set PDF owner password.
+Set PDF owner password. Not available in demo mode: throws DemoUnsupportedException if the client was constructed without an API key.
 
 #### Parameters
 
@@ -925,6 +1445,20 @@ The default value is 0px and it means that the page height is automatically calc
 #### Parameters
 
 *   `webPageHeight`  Browser window height in pixels. Set it to 0px to automatically calculate page height.
+
+Returns **any** Reference to the current object.
+
+### setWebPageFixedSize
+
+Leave out the content below the web page height (set with setWebPageHeight) instead of letting the page flow onto further pages.
+
+When not set, each rendering engine keeps its own behavior: WebKit and WebKit Restricted leave the content out whenever a web page height is set,
+Blink and Chromium convert the whole page. Set it to True or False to choose explicitly. It needs a non-zero web page height; with 0 there is no
+height to fix the page at and the setting is ignored. With WebKit, a fixed size also cuts off content wider than the web page width.
+
+#### Parameters
+
+*   `webPageFixedSize`  True to cut the page at the web page height, False to convert the whole page.
 
 Returns **any** Reference to the current object.
 
@@ -1609,11 +2143,33 @@ Returns **any** Reference to the current object.
 
 ### setCookies
 
-Set HTTP cookies for the web page being converted.
+Set HTTP cookies for the web page being converted. The demo endpoint does not send cookies; it reports the value in getDroppedFields.
 
 #### Parameters
 
-*   `cookies`  HTTP cookies that will be sent to the page being converted.
+*   `cookies`  HTTP cookies that will be sent to the page being converted, as an object of name/value pairs (for example { session: 'abc', lang: 'en' }).
+
+Returns **any** Reference to the current object.
+
+### setAuthUsername
+
+Set the user name for HTTP Basic authentication on the web page being converted.
+Use it together with setAuthPassword. The demo endpoint does not send credentials; it reports the value in getDroppedFields.
+
+#### Parameters
+
+*   `authUsername`  User name for HTTP Basic authentication.
+
+Returns **any** Reference to the current object.
+
+### setAuthPassword
+
+Set the password for HTTP Basic authentication on the web page being converted.
+Use it together with setAuthUsername. The demo endpoint does not send credentials; it reports the value in getDroppedFields.
+
+#### Parameters
+
+*   `authPassword`  Password for HTTP Basic authentication.
 
 Returns **any** Reference to the current object.
 
@@ -1635,6 +2191,237 @@ Get the locations of certain web elements. This is retrieved if pdf_web_elements
 #### Parameters
 
 *   `callback`  Callback function(err, data). Object err will contain the error, if any. If there is no error, data parameter will contain web elements positions in json format.
+
+## InvoiceClient
+
+Create ZUGFeRD / Factur-X hybrid electronic invoices with SelectPdf Online API.
+
+A hybrid electronic invoice is one PDF/A-3 file carrying both halves of the invoice: the page a human reads,
+and the XML a recipient's accounting system reads. This client converts a url or an HTML string into the visible invoice
+and embeds the XML into it as an associated file, with the metadata invoice software looks for.
+
+It derives from HtmlToPdfClient, so every conversion setting - page size, margins, headers, footers, rendering engine - applies here too.
+Use the createFrom* methods rather than the inherited convert* methods: the invoice endpoint takes a multipart request,
+because the XML is uploaded as a file part.
+
+The carrier document must be PDF/A-3. The default is PdfA3A, the accessible level, which the standards recommend because
+it makes the visible invoice readable by assistive technology as well as archivable. Because PdfA3A is a tagged standard,
+a request that does not set a rendering engine is promoted to Chromium by the API, which reports the engine used in the
+X-SelectPdf-Engine response header.
+
+Unlike HtmlToPdfClient, this client has no demo mode - the keyless demo endpoint does not produce electronic invoices - so an API key is required.
+
+### Parameters
+
+*   `apiKey`  API key. Required - the constructor throws ApiException when it is missing, empty or "demo".
+
+### Examples
+
+Create a hybrid electronic invoice in NodeJS with SelectPdf online REST API:
+
+```javascript
+var selectpdf = require('selectpdf');
+
+console.log("This is SelectPdf-%s.", selectpdf.CLIENT_VERSION);
+
+try {
+    var apiKey = 'Your API key here';
+    var invoiceHtml = '<html><body><h1>Invoice INV-2026-001</h1></body></html>';
+    var invoiceXml = 'factur-x.xml';
+    var localFile = 'Invoice.pdf';
+
+    var client = new selectpdf.InvoiceClient(apiKey);
+
+    client
+        .setInvoiceXmlFile(invoiceXml)
+        .setZugferdProfile(selectpdf.ZugferdProfile.En16931)
+        .setDocTitle('Invoice INV-2026-001')
+    ;
+
+    client.createFromHtmlStringToFile(invoiceHtml, localFile,
+        function(err, fileName) {
+            if (err) return console.log("An error occurred: " + err);
+            console.log("Finished! Result is in file '" + fileName + "'. Number of pages: " + client.getNumberOfPages());
+        }
+    );
+}
+catch (ex) {
+    console.log("An error occurred: " + ex);
+}
+```
+
+### setInvoiceXmlFile
+
+Set the invoice XML from a local file.
+Only the content of the file is used - the name recorded inside the PDF is the one the standard prescribes
+("factur-x.xml", or "xrechnung.xml" for the XRECHNUNG profile), because recipients look it up by name.
+
+#### Parameters
+
+*   `invoiceXmlFile`  Path to the local invoice XML file.
+
+Returns **any** Reference to the current object.
+
+### setInvoiceXml
+
+Set the invoice XML from memory.
+
+#### Parameters
+
+*   `invoiceXml`  The invoice XML, as a Buffer or as a string (a string is sent UTF-8 encoded).
+
+Returns **any** Reference to the current object.
+
+### setZugferdProfile
+
+Set the data profile of the invoice XML. Required.
+
+#### Parameters
+
+*   `profile`  The invoice data profile. Allowed values for ZUGFeRD Profile: Minimum, Basic_WL, Basic, En16931, Extended, XRechnung (see ZugferdProfile).
+
+Returns **any** Reference to the current object.
+
+### setZugferdRelationship
+
+Set how the embedded XML relates to the visible invoice page.
+Optional. When not set, the API derives it from the profile: Alternative for Minimum and Basic_WL, which do not carry a complete invoice,
+and Data for the rest. Those two profiles combined with Data are rejected by the API.
+
+#### Parameters
+
+*   `relationship`  The relationship between XML and page. Allowed values for ZUGFeRD Relationship: Data, Alternative, Source, Supplement (see ZugferdRelationship).
+
+Returns **any** Reference to the current object.
+
+### setZugferdSchema
+
+Set the metadata schema identifying the invoice. Defaults to FacturX10.
+
+#### Parameters
+
+*   `schema`  The invoice metadata schema. Allowed values for ZUGFeRD Schema: FacturX10, Zugferd20 (see ZugferdSchema).
+
+Returns **any** Reference to the current object.
+
+### createFromUrl
+
+Create a hybrid electronic invoice from the invoice page at the specified url.
+
+#### Parameters
+
+*   `url`  Url of the invoice page.
+*   `callback`  Callback function(err, data). Object err will contain the error, if any. If there is no error, data parameter will contain the hybrid invoice PDF.
+
+### createFromUrlToFile
+
+Create a hybrid electronic invoice from the invoice page at the specified url and write it to a local file.
+
+#### Parameters
+
+*   `url`  Url of the invoice page.
+*   `filePath`  Path of the output file.
+*   `callback`  Callback function(err, filePath). Object err will contain the error, if any. If there is no error, filePath will contain the name of the output file.
+
+### createFromHtmlStringWithBaseUrl
+
+Create a hybrid electronic invoice from a raw HTML string. Use a base url to resolve relative paths to resources.
+
+#### Parameters
+
+*   `htmlString`  The invoice HTML.
+*   `baseUrl`  Base url used to resolve relative paths in the HTML (css, images, etc). Must be a http:// or https:// publicly available url.
+*   `callback`  Callback function(err, data). Object err will contain the error, if any. If there is no error, data parameter will contain the hybrid invoice PDF.
+
+### createFromHtmlStringWithBaseUrlToFile
+
+Create a hybrid electronic invoice from a raw HTML string and write it to a local file. Use a base url to resolve relative paths to resources.
+
+#### Parameters
+
+*   `htmlString`  The invoice HTML.
+*   `baseUrl`  Base url used to resolve relative paths in the HTML (css, images, etc). Must be a http:// or https:// publicly available url.
+*   `filePath`  Path of the output file.
+*   `callback`  Callback function(err, filePath). Object err will contain the error, if any. If there is no error, filePath will contain the name of the output file.
+
+### createFromHtmlString
+
+Create a hybrid electronic invoice from a raw HTML string.
+
+#### Parameters
+
+*   `htmlString`  The invoice HTML.
+*   `callback`  Callback function(err, data). Object err will contain the error, if any. If there is no error, data parameter will contain the hybrid invoice PDF.
+
+### createFromHtmlStringToFile
+
+Create a hybrid electronic invoice from a raw HTML string and write it to a local file.
+
+#### Parameters
+
+*   `htmlString`  The invoice HTML.
+*   `filePath`  Path of the output file.
+*   `callback`  Callback function(err, filePath). Object err will contain the error, if any. If there is no error, filePath will contain the name of the output file.
+
+### createFromUrlAsync
+
+Create a hybrid electronic invoice from the invoice page at the specified url, with an asynchronous call.
+Recommended for long invoice pages or callers that cannot hold an HTTP connection open for the whole conversion.
+
+#### Parameters
+
+*   `url`  Url of the invoice page.
+*   `callback`  Callback function(err, data). Object err will contain the error, if any. If there is no error, data parameter will contain the hybrid invoice PDF.
+
+### createFromUrlToFileAsync
+
+Create a hybrid electronic invoice from the invoice page at the specified url, with an asynchronous call, and write it to a local file.
+
+#### Parameters
+
+*   `url`  Url of the invoice page.
+*   `filePath`  Path of the output file.
+*   `callback`  Callback function(err, filePath). Object err will contain the error, if any. If there is no error, filePath will contain the name of the output file.
+
+### createFromHtmlStringWithBaseUrlAsync
+
+Create a hybrid electronic invoice from a raw HTML string, with an asynchronous call. Use a base url to resolve relative paths to resources.
+
+#### Parameters
+
+*   `htmlString`  The invoice HTML.
+*   `baseUrl`  Base url used to resolve relative paths in the HTML (css, images, etc). Must be a http:// or https:// publicly available url.
+*   `callback`  Callback function(err, data). Object err will contain the error, if any. If there is no error, data parameter will contain the hybrid invoice PDF.
+
+### createFromHtmlStringWithBaseUrlToFileAsync
+
+Create a hybrid electronic invoice from a raw HTML string, with an asynchronous call, and write it to a local file. Use a base url to resolve relative paths to resources.
+
+#### Parameters
+
+*   `htmlString`  The invoice HTML.
+*   `baseUrl`  Base url used to resolve relative paths in the HTML (css, images, etc). Must be a http:// or https:// publicly available url.
+*   `filePath`  Path of the output file.
+*   `callback`  Callback function(err, filePath). Object err will contain the error, if any. If there is no error, filePath will contain the name of the output file.
+
+### createFromHtmlStringAsync
+
+Create a hybrid electronic invoice from a raw HTML string, with an asynchronous call.
+
+#### Parameters
+
+*   `htmlString`  The invoice HTML.
+*   `callback`  Callback function(err, data). Object err will contain the error, if any. If there is no error, data parameter will contain the hybrid invoice PDF.
+
+### createFromHtmlStringToFileAsync
+
+Create a hybrid electronic invoice from a raw HTML string, with an asynchronous call, and write it to a local file.
+
+#### Parameters
+
+*   `htmlString`  The invoice HTML.
+*   `filePath`  Path of the output file.
+*   `callback`  Callback function(err, filePath). Object err will contain the error, if any. If there is no error, filePath will contain the name of the output file.
 
 ## UsageClient
 
@@ -2285,650 +3072,884 @@ Returns **any** Reference to the current object.
 
 [5]: #tostring
 
-[6]: #apiclient
+[6]: #demoratelimitexception
 
-[7]: #apiendpoint
+[7]: #parameters-1
 
-[8]: #apiasyncendpoint
+[8]: #statuscode
 
-[9]: #apiwebelementsendpoint
+[9]: #reason
 
-[10]: #parameters-1
+[10]: #retryafter
 
-[11]: #headers
+[11]: #upgradeurl
 
-[12]: #files
+[12]: #responsebody
 
-[13]: #binarydata
+[13]: #demosafetyexception
 
-[14]: #numberofpages
+[14]: #parameters-2
 
-[15]: #jobid
+[15]: #statuscode-1
 
-[16]: #lasthttpcode
+[16]: #field
 
-[17]: #asynccallspinginterval
+[17]: #reason-1
 
-[18]: #asynccallsmaxpings
+[18]: #responsebody-1
 
-[19]: #performpost
+[19]: #demounsupportedexception
 
-[20]: #parameters-2
+[20]: #parameters-3
 
-[21]: #performpostasmultipartformdata
+[21]: #statuscode-2
 
-[22]: #parameters-3
+[22]: #field-1
 
-[23]: #encodemultipartformdata
+[23]: #upgradeurl-1
 
-[24]: #startasyncjob
+[24]: #responsebody-2
 
-[25]: #parameters-4
+[25]: #pagesize
 
-[26]: #startasyncjobmultipartformdata
+[26]: #pageorientation
 
-[27]: #parameters-5
+[27]: #renderingengine
 
-[28]: #getnumberofpages
+[28]: #secureprotocol
 
-[29]: #serializeboolean
+[29]: #pagelayout
 
-[30]: #parameters-6
+[30]: #pagemode
 
-[31]: #htmltopdfclient
+[31]: #pagenumbersalignment
 
-[32]: #parameters-7
+[32]: #startupmode
 
-[33]: #examples-1
+[33]: #textlayout
 
-[34]: #converturl
+[34]: #outputformat
 
-[35]: #parameters-8
+[35]: #pdfstandard
 
-[36]: #converturltofile
+[36]: #zugferdprofile
 
-[37]: #parameters-9
+[37]: #zugferdrelationship
 
-[38]: #converturlasync
+[38]: #zugferdschema
 
-[39]: #parameters-10
+[39]: #apiclient
 
-[40]: #converturltofileasync
+[40]: #apiendpoint
 
-[41]: #parameters-11
+[41]: #apiasyncendpoint
 
-[42]: #converthtmlstringwithbaseurl
+[42]: #apiwebelementsendpoint
 
-[43]: #parameters-12
+[43]: #parameters-4
 
-[44]: #converthtmlstringwithbaseurltofile
+[44]: #headers
 
-[45]: #parameters-13
+[45]: #files
 
-[46]: #converthtmlstringwithbaseurlasync
+[46]: #binarydata
 
-[47]: #parameters-14
+[47]: #numberofpages
 
-[48]: #converthtmlstringwithbaseurltofileasync
+[48]: #jobid
 
-[49]: #parameters-15
+[49]: #lasthttpcode
 
-[50]: #converthtmlstring
+[50]: #creditstotal
 
-[51]: #parameters-16
+[51]: #creditsremaining
 
-[52]: #converthtmlstringtofile
+[52]: #mode
 
-[53]: #parameters-17
+[53]: #executionmode
 
-[54]: #converthtmlstringasync
+[54]: #asynccallspinginterval
 
-[55]: #parameters-18
+[55]: #asynccallsmaxpings
 
-[56]: #converthtmlstringtofileasync
+[56]: #setapiendpoint
 
-[57]: #parameters-19
+[57]: #parameters-5
 
-[58]: #setpagesize
+[58]: #setapiasyncendpoint
 
-[59]: #parameters-20
+[59]: #parameters-6
 
-[60]: #setpagewidth
+[60]: #setapiwebelementsendpoint
 
-[61]: #parameters-21
+[61]: #parameters-7
 
-[62]: #setpageheight
+[62]: #resetresults
 
-[63]: #parameters-22
+[63]: #readstandardresponseheaders
 
-[64]: #setpageorientation
+[64]: #parameters-8
 
-[65]: #parameters-23
+[65]: #onresponseheadersreceived
 
-[66]: #setmargintop
+[66]: #parameters-9
 
-[67]: #parameters-24
+[67]: #performrequest
 
-[68]: #setmarginright
+[68]: #parameters-10
 
-[69]: #parameters-25
+[69]: #performpost
 
-[70]: #setmarginbottom
+[70]: #parameters-11
 
-[71]: #parameters-26
+[71]: #performpostasmultipartformdata
 
-[72]: #setmarginleft
+[72]: #parameters-12
 
-[73]: #parameters-27
+[73]: #encodemultipartformdata
 
-[74]: #setmargins
+[74]: #startasyncjob
 
-[75]: #parameters-28
+[75]: #parameters-13
 
-[76]: #setpdfname
+[76]: #startasyncjobmultipartformdata
 
-[77]: #parameters-29
+[77]: #parameters-14
 
-[78]: #setrenderingengine
+[78]: #runasyncjob
 
-[79]: #parameters-30
+[79]: #parameters-15
 
-[80]: #setuserpassword
+[80]: #getnumberofpages
 
-[81]: #parameters-31
+[81]: #getcreditstotal
 
-[82]: #setownerpassword
+[82]: #getcreditsremaining
 
-[83]: #parameters-32
+[83]: #getmode
 
-[84]: #setwebpagewidth
+[84]: #getexecutionmode
 
-[85]: #parameters-33
+[85]: #serializeboolean
 
-[86]: #setwebpageheight
+[86]: #parameters-16
 
-[87]: #parameters-34
+[87]: #htmltopdfclient
 
-[88]: #setminloadtime
+[88]: #parameters-17
 
-[89]: #parameters-35
+[89]: #examples-1
 
-[90]: #setconversiondelay
+[90]: #demomode
 
-[91]: #parameters-36
+[91]: #clampedfields
 
-[92]: #setmaxloadtime
+[92]: #droppedfields
 
-[93]: #parameters-37
+[93]: #resetresults-1
 
-[94]: #setnavigationtimeout
+[94]: #onresponseheadersreceived-1
 
-[95]: #parameters-38
+[95]: #parameters-18
 
-[96]: #setsecureprotocol
+[96]: #isdemomode
 
-[97]: #parameters-39
+[97]: #isdemoresponse
 
-[98]: #setusecssprint
+[98]: #getclampedfields
 
-[99]: #parameters-40
+[99]: #wasclamped
 
-[100]: #setbackgroundcolor
+[100]: #getdroppedfields
 
-[101]: #parameters-41
+[101]: #wasanyfielddropped
 
-[102]: #setdrawhtmlbackground
+[102]: #converturl
 
-[103]: #parameters-42
+[103]: #parameters-19
 
-[104]: #setdisablejavascript
+[104]: #converturltofile
 
-[105]: #parameters-43
+[105]: #parameters-20
 
-[106]: #setdisableinternallinks
+[106]: #converturlasync
 
-[107]: #parameters-44
+[107]: #parameters-21
 
-[108]: #setdisableexternallinks
+[108]: #converturltofileasync
 
-[109]: #parameters-45
+[109]: #parameters-22
 
-[110]: #setrenderontimeout
+[110]: #converthtmlstringwithbaseurl
 
-[111]: #parameters-46
+[111]: #parameters-23
 
-[112]: #setkeepimagestogether
+[112]: #converthtmlstringwithbaseurltofile
 
-[113]: #parameters-47
+[113]: #parameters-24
 
-[114]: #setdoctitle
+[114]: #converthtmlstringwithbaseurlasync
 
-[115]: #parameters-48
+[115]: #parameters-25
 
-[116]: #setdocsubject
+[116]: #converthtmlstringwithbaseurltofileasync
 
-[117]: #parameters-49
+[117]: #parameters-26
 
-[118]: #setdockeywords
+[118]: #converthtmlstring
 
-[119]: #parameters-50
+[119]: #parameters-27
 
-[120]: #setdocauthor
+[120]: #converthtmlstringtofile
 
-[121]: #parameters-51
+[121]: #parameters-28
 
-[122]: #setdocaddcreationdate
+[122]: #converthtmlstringasync
 
-[123]: #parameters-52
+[123]: #parameters-29
 
-[124]: #setviewerpagelayout
+[124]: #converthtmlstringtofileasync
 
-[125]: #parameters-53
+[125]: #parameters-30
 
-[126]: #setviewerpagemode
+[126]: #setpagesize
 
-[127]: #parameters-54
+[127]: #parameters-31
 
-[128]: #setviewercenterwindow
+[128]: #setpagewidth
 
-[129]: #parameters-55
+[129]: #parameters-32
 
-[130]: #setviewerdisplaydoctitle
+[130]: #setpageheight
 
-[131]: #parameters-56
+[131]: #parameters-33
 
-[132]: #setviewerfitwindow
+[132]: #setpageorientation
 
-[133]: #parameters-57
+[133]: #parameters-34
 
-[134]: #setviewerhidemenubar
+[134]: #setmargintop
 
-[135]: #parameters-58
+[135]: #parameters-35
 
-[136]: #setviewerhidetoolbar
+[136]: #setmarginright
 
-[137]: #parameters-59
+[137]: #parameters-36
 
-[138]: #setviewerhidewindowui
+[138]: #setmarginbottom
 
-[139]: #parameters-60
+[139]: #parameters-37
 
-[140]: #setshowheader
+[140]: #setmarginleft
 
-[141]: #parameters-61
+[141]: #parameters-38
 
-[142]: #setheaderheight
+[142]: #setmargins
 
-[143]: #parameters-62
+[143]: #parameters-39
 
-[144]: #setheaderurl
+[144]: #setpdfname
 
-[145]: #parameters-63
+[145]: #parameters-40
 
-[146]: #setheaderhtml
+[146]: #setrenderingengine
 
-[147]: #parameters-64
+[147]: #parameters-41
 
-[148]: #setheaderbaseurl
+[148]: #settagged
 
-[149]: #parameters-65
+[149]: #parameters-42
 
-[150]: #setheaderdisplayonfirstpage
+[150]: #setpdfstandard
 
-[151]: #parameters-66
+[151]: #parameters-43
 
-[152]: #setheaderdisplayonoddpages
+[152]: #setdocumentlanguage
 
-[153]: #parameters-67
+[153]: #parameters-44
 
-[154]: #setheaderdisplayonevenpages
+[154]: #setuserpassword
 
-[155]: #parameters-68
+[155]: #parameters-45
 
-[156]: #setheaderwebpagewidth
+[156]: #setownerpassword
 
-[157]: #parameters-69
+[157]: #parameters-46
 
-[158]: #setheaderwebpageheight
+[158]: #setwebpagewidth
 
-[159]: #parameters-70
+[159]: #parameters-47
 
-[160]: #setshowfooter
+[160]: #setwebpageheight
 
-[161]: #parameters-71
+[161]: #parameters-48
 
-[162]: #setfooterheight
+[162]: #setwebpagefixedsize
 
-[163]: #parameters-72
+[163]: #parameters-49
 
-[164]: #setfooterurl
+[164]: #setminloadtime
 
-[165]: #parameters-73
+[165]: #parameters-50
 
-[166]: #setfooterhtml
+[166]: #setconversiondelay
 
-[167]: #parameters-74
+[167]: #parameters-51
 
-[168]: #setfooterbaseurl
+[168]: #setmaxloadtime
 
-[169]: #parameters-75
+[169]: #parameters-52
 
-[170]: #setfooterdisplayonfirstpage
+[170]: #setnavigationtimeout
 
-[171]: #parameters-76
+[171]: #parameters-53
 
-[172]: #setfooterdisplayonoddpages
+[172]: #setsecureprotocol
 
-[173]: #parameters-77
+[173]: #parameters-54
 
-[174]: #setfooterdisplayonevenpages
+[174]: #setusecssprint
 
-[175]: #parameters-78
+[175]: #parameters-55
 
-[176]: #setfooterdisplayonlastpage
+[176]: #setbackgroundcolor
 
-[177]: #parameters-79
+[177]: #parameters-56
 
-[178]: #setfooterwebpagewidth
+[178]: #setdrawhtmlbackground
 
-[179]: #parameters-80
+[179]: #parameters-57
 
-[180]: #setfooterwebpageheight
+[180]: #setdisablejavascript
 
-[181]: #parameters-81
+[181]: #parameters-58
 
-[182]: #setshowpagenumbers
+[182]: #setdisableinternallinks
 
-[183]: #parameters-82
+[183]: #parameters-59
 
-[184]: #setpagenumbersfirst
+[184]: #setdisableexternallinks
 
-[185]: #parameters-83
+[185]: #parameters-60
 
-[186]: #setpagenumbersoffset
+[186]: #setrenderontimeout
 
-[187]: #parameters-84
+[187]: #parameters-61
 
-[188]: #setpagenumberstemplate
+[188]: #setkeepimagestogether
 
-[189]: #parameters-85
+[189]: #parameters-62
 
-[190]: #setpagenumbersfontname
+[190]: #setdoctitle
 
-[191]: #parameters-86
+[191]: #parameters-63
 
-[192]: #setpagenumbersfontsize
+[192]: #setdocsubject
 
-[193]: #parameters-87
+[193]: #parameters-64
 
-[194]: #setpagenumbersalignment
+[194]: #setdockeywords
 
-[195]: #parameters-88
+[195]: #parameters-65
 
-[196]: #setpagenumberscolor
+[196]: #setdocauthor
 
-[197]: #parameters-89
+[197]: #parameters-66
 
-[198]: #setpagenumbersverticalposition
+[198]: #setdocaddcreationdate
 
-[199]: #parameters-90
+[199]: #parameters-67
 
-[200]: #setpdfbookmarksselectors
+[200]: #setviewerpagelayout
 
-[201]: #parameters-91
+[201]: #parameters-68
 
-[202]: #setpdfhideelements
+[202]: #setviewerpagemode
 
-[203]: #parameters-92
+[203]: #parameters-69
 
-[204]: #setpdfshowonlyelementid
+[204]: #setviewercenterwindow
 
-[205]: #parameters-93
+[205]: #parameters-70
 
-[206]: #setpdfwebelementsselectors
+[206]: #setviewerdisplaydoctitle
 
-[207]: #parameters-94
+[207]: #parameters-71
 
-[208]: #setstartupmode
+[208]: #setviewerfitwindow
 
-[209]: #parameters-95
+[209]: #parameters-72
 
-[210]: #setskipdecoding
+[210]: #setviewerhidemenubar
 
-[211]: #parameters-96
+[211]: #parameters-73
 
-[212]: #setscaleimages
+[212]: #setviewerhidetoolbar
 
-[213]: #parameters-97
+[213]: #parameters-74
 
-[214]: #setsinglepagepdf
+[214]: #setviewerhidewindowui
 
-[215]: #parameters-98
+[215]: #parameters-75
 
-[216]: #setpagebreaksenhancedalgorithm
+[216]: #setshowheader
 
-[217]: #parameters-99
+[217]: #parameters-76
 
-[218]: #setcookies
+[218]: #setheaderheight
 
-[219]: #parameters-100
+[219]: #parameters-77
 
-[220]: #setcustomparameter
+[220]: #setheaderurl
 
-[221]: #parameters-101
+[221]: #parameters-78
 
-[222]: #getwebelements
+[222]: #setheaderhtml
 
-[223]: #parameters-102
+[223]: #parameters-79
 
-[224]: #usageclient
+[224]: #setheaderbaseurl
 
-[225]: #parameters-103
+[225]: #parameters-80
 
-[226]: #getusage
+[226]: #setheaderdisplayonfirstpage
 
-[227]: #parameters-104
+[227]: #parameters-81
 
-[228]: #webelementsclient
+[228]: #setheaderdisplayonoddpages
 
-[229]: #parameters-105
+[229]: #parameters-82
 
-[230]: #getwebelements-1
+[230]: #setheaderdisplayonevenpages
 
-[231]: #parameters-106
+[231]: #parameters-83
 
-[232]: #asyncjobclient
+[232]: #setheaderwebpagewidth
 
-[233]: #parameters-107
+[233]: #parameters-84
 
-[234]: #getresult
+[234]: #setheaderwebpageheight
 
-[235]: #parameters-108
+[235]: #parameters-85
 
-[236]: #finished
+[236]: #setshowfooter
 
-[237]: #pdfmergeclient
+[237]: #parameters-86
 
-[238]: #parameters-109
+[238]: #setfooterheight
 
-[239]: #examples-2
+[239]: #parameters-87
 
-[240]: #addfile
+[240]: #setfooterurl
 
-[241]: #parameters-110
+[241]: #parameters-88
 
-[242]: #addurlfile
+[242]: #setfooterhtml
 
-[243]: #parameters-111
+[243]: #parameters-89
 
-[244]: #save
+[244]: #setfooterbaseurl
 
-[245]: #parameters-112
+[245]: #parameters-90
 
-[246]: #savetofile
+[246]: #setfooterdisplayonfirstpage
 
-[247]: #parameters-113
+[247]: #parameters-91
 
-[248]: #saveasync
+[248]: #setfooterdisplayonoddpages
 
-[249]: #parameters-114
+[249]: #parameters-92
 
-[250]: #savetofileasync
+[250]: #setfooterdisplayonevenpages
 
-[251]: #parameters-115
+[251]: #parameters-93
 
-[252]: #setdoctitle-1
+[252]: #setfooterdisplayonlastpage
 
-[253]: #parameters-116
+[253]: #parameters-94
 
-[254]: #setdocsubject-1
+[254]: #setfooterwebpagewidth
 
-[255]: #parameters-117
+[255]: #parameters-95
 
-[256]: #setdockeywords-1
+[256]: #setfooterwebpageheight
 
-[257]: #parameters-118
+[257]: #parameters-96
 
-[258]: #setdocauthor-1
+[258]: #setshowpagenumbers
 
-[259]: #parameters-119
+[259]: #parameters-97
 
-[260]: #setdocaddcreationdate-1
+[260]: #setpagenumbersfirst
 
-[261]: #parameters-120
+[261]: #parameters-98
 
-[262]: #setviewerpagelayout-1
+[262]: #setpagenumbersoffset
 
-[263]: #parameters-121
+[263]: #parameters-99
 
-[264]: #setviewerpagemode-1
+[264]: #setpagenumberstemplate
 
-[265]: #parameters-122
+[265]: #parameters-100
 
-[266]: #setviewercenterwindow-1
+[266]: #setpagenumbersfontname
 
-[267]: #parameters-123
+[267]: #parameters-101
 
-[268]: #setviewerdisplaydoctitle-1
+[268]: #setpagenumbersfontsize
 
-[269]: #parameters-124
+[269]: #parameters-102
 
-[270]: #setviewerfitwindow-1
+[270]: #setpagenumbersalignment
 
-[271]: #parameters-125
+[271]: #parameters-103
 
-[272]: #setviewerhidemenubar-1
+[272]: #setpagenumberscolor
 
-[273]: #parameters-126
+[273]: #parameters-104
 
-[274]: #setviewerhidetoolbar-1
+[274]: #setpagenumbersverticalposition
 
-[275]: #parameters-127
+[275]: #parameters-105
 
-[276]: #setviewerhidewindowui-1
+[276]: #setpdfbookmarksselectors
 
-[277]: #parameters-128
+[277]: #parameters-106
 
-[278]: #setuserpassword-1
+[278]: #setpdfhideelements
 
-[279]: #parameters-129
+[279]: #parameters-107
 
-[280]: #setownerpassword-1
+[280]: #setpdfshowonlyelementid
 
-[281]: #parameters-130
+[281]: #parameters-108
 
-[282]: #settimeout
+[282]: #setpdfwebelementsselectors
 
-[283]: #parameters-131
+[283]: #parameters-109
 
-[284]: #setcustomparameter-1
+[284]: #setstartupmode
 
-[285]: #parameters-132
+[285]: #parameters-110
 
-[286]: #pdftotextclient
+[286]: #setskipdecoding
 
-[287]: #parameters-133
+[287]: #parameters-111
 
-[288]: #examples-3
+[288]: #setscaleimages
 
-[289]: #gettextfromfile
+[289]: #parameters-112
 
-[290]: #parameters-134
+[290]: #setsinglepagepdf
 
-[291]: #gettextfromfiletofile
+[291]: #parameters-113
 
-[292]: #parameters-135
+[292]: #setpagebreaksenhancedalgorithm
 
-[293]: #gettextfromfileasync
+[293]: #parameters-114
 
-[294]: #parameters-136
+[294]: #setcookies
 
-[295]: #gettextfromfiletofileasync
+[295]: #parameters-115
 
-[296]: #parameters-137
+[296]: #setauthusername
 
-[297]: #gettextfromurl
+[297]: #parameters-116
 
-[298]: #parameters-138
+[298]: #setauthpassword
 
-[299]: #gettextfromurltofile
+[299]: #parameters-117
 
-[300]: #parameters-139
+[300]: #setcustomparameter
 
-[301]: #gettextfromurlasync
+[301]: #parameters-118
 
-[302]: #parameters-140
+[302]: #getwebelements
 
-[303]: #gettextfromurltofileasync
+[303]: #parameters-119
 
-[304]: #parameters-141
+[304]: #invoiceclient
 
-[305]: #searchfile
+[305]: #parameters-120
 
-[306]: #parameters-142
+[306]: #examples-2
 
-[307]: #searchfileasync
+[307]: #setinvoicexmlfile
 
-[308]: #parameters-143
+[308]: #parameters-121
 
-[309]: #searchurl
+[309]: #setinvoicexml
 
-[310]: #parameters-144
+[310]: #parameters-122
 
-[311]: #searchurlasync
+[311]: #setzugferdprofile
 
-[312]: #parameters-145
+[312]: #parameters-123
 
-[313]: #setstartpage
+[313]: #setzugferdrelationship
 
-[314]: #parameters-146
+[314]: #parameters-124
 
-[315]: #setendpage
+[315]: #setzugferdschema
 
-[316]: #parameters-147
+[316]: #parameters-125
 
-[317]: #setuserpassword-2
+[317]: #createfromurl
 
-[318]: #parameters-148
+[318]: #parameters-126
 
-[319]: #settextlayout
+[319]: #createfromurltofile
 
-[320]: #parameters-149
+[320]: #parameters-127
 
-[321]: #setoutputformat
+[321]: #createfromhtmlstringwithbaseurl
 
-[322]: #parameters-150
+[322]: #parameters-128
 
-[323]: #settimeout-1
+[323]: #createfromhtmlstringwithbaseurltofile
 
-[324]: #parameters-151
+[324]: #parameters-129
 
-[325]: #setcustomparameter-2
+[325]: #createfromhtmlstring
 
-[326]: #parameters-152
+[326]: #parameters-130
 
-[327]: https://selectpdf.com/html-to-pdf-api/
+[327]: #createfromhtmlstringtofile
 
-[328]: https://selectpdf.com/pdf-to-text-api/
+[328]: #parameters-131
 
-[329]: https://selectpdf.com/pdf-merge-api/
+[329]: #createfromurlasync
+
+[330]: #parameters-132
+
+[331]: #createfromurltofileasync
+
+[332]: #parameters-133
+
+[333]: #createfromhtmlstringwithbaseurlasync
+
+[334]: #parameters-134
+
+[335]: #createfromhtmlstringwithbaseurltofileasync
+
+[336]: #parameters-135
+
+[337]: #createfromhtmlstringasync
+
+[338]: #parameters-136
+
+[339]: #createfromhtmlstringtofileasync
+
+[340]: #parameters-137
+
+[341]: #usageclient
+
+[342]: #parameters-138
+
+[343]: #getusage
+
+[344]: #parameters-139
+
+[345]: #webelementsclient
+
+[346]: #parameters-140
+
+[347]: #getwebelements-1
+
+[348]: #parameters-141
+
+[349]: #asyncjobclient
+
+[350]: #parameters-142
+
+[351]: #getresult
+
+[352]: #parameters-143
+
+[353]: #finished
+
+[354]: #pdfmergeclient
+
+[355]: #parameters-144
+
+[356]: #examples-3
+
+[357]: #addfile
+
+[358]: #parameters-145
+
+[359]: #addurlfile
+
+[360]: #parameters-146
+
+[361]: #save
+
+[362]: #parameters-147
+
+[363]: #savetofile
+
+[364]: #parameters-148
+
+[365]: #saveasync
+
+[366]: #parameters-149
+
+[367]: #savetofileasync
+
+[368]: #parameters-150
+
+[369]: #setdoctitle-1
+
+[370]: #parameters-151
+
+[371]: #setdocsubject-1
+
+[372]: #parameters-152
+
+[373]: #setdockeywords-1
+
+[374]: #parameters-153
+
+[375]: #setdocauthor-1
+
+[376]: #parameters-154
+
+[377]: #setdocaddcreationdate-1
+
+[378]: #parameters-155
+
+[379]: #setviewerpagelayout-1
+
+[380]: #parameters-156
+
+[381]: #setviewerpagemode-1
+
+[382]: #parameters-157
+
+[383]: #setviewercenterwindow-1
+
+[384]: #parameters-158
+
+[385]: #setviewerdisplaydoctitle-1
+
+[386]: #parameters-159
+
+[387]: #setviewerfitwindow-1
+
+[388]: #parameters-160
+
+[389]: #setviewerhidemenubar-1
+
+[390]: #parameters-161
+
+[391]: #setviewerhidetoolbar-1
+
+[392]: #parameters-162
+
+[393]: #setviewerhidewindowui-1
+
+[394]: #parameters-163
+
+[395]: #setuserpassword-1
+
+[396]: #parameters-164
+
+[397]: #setownerpassword-1
+
+[398]: #parameters-165
+
+[399]: #settimeout
+
+[400]: #parameters-166
+
+[401]: #setcustomparameter-1
+
+[402]: #parameters-167
+
+[403]: #pdftotextclient
+
+[404]: #parameters-168
+
+[405]: #examples-4
+
+[406]: #gettextfromfile
+
+[407]: #parameters-169
+
+[408]: #gettextfromfiletofile
+
+[409]: #parameters-170
+
+[410]: #gettextfromfileasync
+
+[411]: #parameters-171
+
+[412]: #gettextfromfiletofileasync
+
+[413]: #parameters-172
+
+[414]: #gettextfromurl
+
+[415]: #parameters-173
+
+[416]: #gettextfromurltofile
+
+[417]: #parameters-174
+
+[418]: #gettextfromurlasync
+
+[419]: #parameters-175
+
+[420]: #gettextfromurltofileasync
+
+[421]: #parameters-176
+
+[422]: #searchfile
+
+[423]: #parameters-177
+
+[424]: #searchfileasync
+
+[425]: #parameters-178
+
+[426]: #searchurl
+
+[427]: #parameters-179
+
+[428]: #searchurlasync
+
+[429]: #parameters-180
+
+[430]: #setstartpage
+
+[431]: #parameters-181
+
+[432]: #setendpage
+
+[433]: #parameters-182
+
+[434]: #setuserpassword-2
+
+[435]: #parameters-183
+
+[436]: #settextlayout
+
+[437]: #parameters-184
+
+[438]: #setoutputformat
+
+[439]: #parameters-185
+
+[440]: #settimeout-1
+
+[441]: #parameters-186
+
+[442]: #setcustomparameter-2
+
+[443]: #parameters-187
+
+[444]: https://selectpdf.com/html-to-pdf-api/
+
+[445]: https://selectpdf.com/pdf-to-text-api/
+
+[446]: https://selectpdf.com/pdf-merge-api/

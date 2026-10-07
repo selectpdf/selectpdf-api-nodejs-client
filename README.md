@@ -1,32 +1,5 @@
 # SelectPdf Online REST API - Node.js Client
 
-SelectPdf Online REST API is a professional solution for managing PDF documents online. It now has a dedicated, easy to use, Node.js client library that can be setup in minutes.
-
-## Installation
-
-Install SelectPdf Nodejs Client for Online API via [npm](https://www.npmjs.com/package/selectpdf).
-
-```
-npm install selectpdf
-```
-
-OR
-
-Download [selectpdf-api-nodejs-client-1.4.0.zip](https://github.com/selectpdf/selectpdf-api-nodejs-client/releases/download/1.4.0/selectpdf-api-nodejs-client-1.4.0.zip), unzip it and run:
-
-```
-npm install /path/to/selectpdf-api-nodejs-client-1.4.0
-```
-
-OR
-
-Clone [selectpdf-api-nodejs-client](https://github.com/selectpdf/selectpdf-api-nodejs-client) from Github and install the library.
-
-```
-git clone https://github.com/selectpdf/selectpdf-api-nodejs-client
-npm install /path/to/selectpdf-api-nodejs-client-1.4.0
-```
-
 ## HTML To PDF API - Node.js Client
 
 SelectPdf HTML To PDF Online REST API is a professional solution that lets you create PDF from web pages and raw HTML code in your applications. The API is easy to use and the integration takes only a few lines of code.
@@ -41,13 +14,15 @@ SelectPdf HTML To PDF Online REST API is a professional solution that lets you c
 * Hide web page elements during the conversion.
 * Automatically generate bookmarks during the html to pdf conversion.
 * Support for partial page conversion.
+* Tagged, accessible PDF and PDF standards (PDF/A, PDF/X, PDF/SiqQ).
+* ZUGFeRD / Factur-X hybrid electronic invoices.
+* Keyless demo mode - try the API without signing up.
 * Works in all programming languages.
 
 Sign up for for free to get instant API access to SelectPdf [HTML to PDF API](https://selectpdf.com/html-to-pdf-api/).
 
 ### Sample Code
 
-```javascript
     var selectpdf = require('selectpdf');
 
     console.log("This is SelectPdf-%s.", selectpdf.CLIENT_VERSION);
@@ -77,7 +52,97 @@ Sign up for for free to get instant API access to SelectPdf [HTML to PDF API](ht
     catch (ex) {
         console.log("An error occurred: " + ex);
     }
-```
+
+### Keyless Demo
+
+Construct `HtmlToPdfClient` without an API key (or with an empty string or `'demo'`) to use the keyless demo endpoint - no signup required. Demo output is watermarked, capped at 5 pages and always rendered with the Chromium engine.
+
+    var client = new selectpdf.HtmlToPdfClient(); // demo mode
+
+    client.convertUrlToFile('https://selectpdf.com', 'Demo.pdf', function(err, fileName) {
+        if (err) return console.log("An error occurred: " + err);
+
+        console.log("Demo mode: " + client.isDemoMode() + ". Demo response: " + client.isDemoResponse() + ".");
+        if (client.wasClamped()) console.log("Clamped: " + client.getClampedFields().join(', '));
+        if (client.wasAnyFieldDropped()) console.log("Dropped: " + client.getDroppedFields().join(', '));
+    });
+
+Demo-mode limits:
+
+* Public urls only - internal and private hosts are rejected with `DemoSafetyException`.
+* Per-IP and global rate limits - reported with `DemoRateLimitException` (`reason`, `retryAfter`, `upgradeUrl`).
+* `setUserPassword`, `setOwnerPassword` and the asynchronous conversions are not available - `DemoUnsupportedException`.
+* Auth credentials, cookies, the pdf name and the web elements selectors are ignored - see `getDroppedFields()`.
+* The navigation timeout and the conversion delay are capped - see `getClampedFields()`.
+
+### Accessible PDF and PDF Standards
+
+    client
+        .setTagged(true) // tagged, accessible PDF (Blink or Chromium engine)
+        .setDocTitle('Accessible document') // a tagged document needs a title
+        .setDocumentLanguage('en-US') // written as the PDF /Lang entry
+        .setPdfStandard(selectpdf.PdfStandard.PdfA3A) // Full, PdfA, PdfA2B, PdfA3A, PdfA3B, PdfA3U, PdfX, PdfSiqQ_A, PdfSiqQ_B
+    ;
+
+Tagged output needs the Blink or Chromium rendering engine. If no engine is set, the API promotes the conversion to Chromium and reports the engine it used in the `X-SelectPdf-Engine` response header. Other 1.6.0 settings: `setWebPageFixedSize` (cut the PDF at the web page height set with `setWebPageHeight`), `setAuthUsername` / `setAuthPassword` (HTTP Basic authentication for the page being converted).
+
+### Error Handling
+
+Errors are passed to the callback as the `err` parameter (setters with invalid values throw). All errors are `selectpdf.ApiException` objects with `message` and `code` (the HTTP status code); the demo endpoint errors have their own types:
+
+    client.convertUrlToFile(url, localFile, function(err, fileName) {
+        if (err instanceof selectpdf.DemoRateLimitException) return console.log("Retry after " + err.retryAfter + "s (" + err.reason + ").");
+        if (err instanceof selectpdf.DemoSafetyException) return console.log("Rejected " + err.field + " (" + err.reason + ").");
+        if (err instanceof selectpdf.DemoUnsupportedException) return console.log("Not available in demo mode: " + err.field + ".");
+        if (err) return console.log("An error occurred: " + err);
+        // ...
+    });
+
+### Response Telemetry
+
+Every client reports, after each call: `getNumberOfPages()`, `getCreditsTotal()` and `getCreditsRemaining()` (monthly conversion limit and conversions left, -1 for unlimited, null when not reported - for example on the demo endpoint), `getMode()` (`production` or `demo`) and `getExecutionMode()`.
+
+## Electronic Invoices API (ZUGFeRD / Factur-X)
+
+`InvoiceClient` creates hybrid electronic invoices: one PDF/A-3 document carrying both the visible invoice and the invoice XML a recipient's accounting system reads. It derives from `HtmlToPdfClient`, so every conversion setting applies here too. An API key is required - the demo endpoint does not produce invoices.
+
+### Features
+
+* Create the visible invoice from a url or an html string.
+* Embed the invoice XML from a local file, a Buffer or a string.
+* Profiles: Minimum, Basic_WL, Basic, En16931, Extended, XRechnung.
+* Carrier PDF/A-3A (default, accessible), PDF/A-3B or PDF/A-3U.
+* The attachment relationship is derived from the profile when not set.
+
+### Sample Code
+
+    var selectpdf = require('selectpdf');
+
+    console.log("This is SelectPdf-%s.", selectpdf.CLIENT_VERSION);
+
+    try {
+        var invoiceHtml = '<html><body><h1>Invoice INV-2026-001</h1></body></html>';
+        var localFile = 'Invoice.pdf';
+        var apiKey = 'Your API key here';
+
+        var client = new selectpdf.InvoiceClient(apiKey);
+
+        client
+            .setInvoiceXmlFile('factur-x.xml') // or setInvoiceXml(xmlStringOrBuffer)
+            .setZugferdProfile(selectpdf.ZugferdProfile.En16931)
+            .setDocTitle('Invoice INV-2026-001')
+        ;
+
+        client.createFromHtmlStringToFile(invoiceHtml, localFile, 
+            function(err, fileName) {
+                if (err) return console.log("An error occurred: " + err);
+                console.log("Finished successfully. Result is in file '" + fileName + "'. Number of pages: " + client.getNumberOfPages());
+            }
+        );
+    }
+    catch (ex) {
+        console.log("An error occurred: " + ex);
+    }
 
 ## Pdf Merge API
 
@@ -95,7 +160,6 @@ See [PDF Merge API](https://selectpdf.com/pdf-merge-api/) page for full list of 
 
 ### Sample Code
 
-```javascript
     var selectpdf = require('selectpdf');
 
     console.log("This is SelectPdf-%s.", selectpdf.CLIENT_VERSION);
@@ -131,7 +195,6 @@ See [PDF Merge API](https://selectpdf.com/pdf-merge-api/) page for full list of 
     catch (ex) {
         console.log("An error occurred: " + ex);
     }
-```
 
 ## Pdf To Text API
 
@@ -149,7 +212,6 @@ See [Pdf To Text API](https://selectpdf.com/pdf-to-text-api/) page for full list
 
 ### Sample Code
 
-```javascript
     var selectpdf = require('selectpdf');
 
     console.log("This is SelectPdf-%s.", selectpdf.CLIENT_VERSION);
@@ -182,4 +244,3 @@ See [Pdf To Text API](https://selectpdf.com/pdf-to-text-api/) page for full list
     catch (ex) {
         console.log("An error occurred: " + ex);
     }
-```
